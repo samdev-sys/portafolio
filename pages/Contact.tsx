@@ -10,7 +10,12 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('¡Gracias por tu mensaje! Samuel se pondrá en contacto contigo pronto.');
+
+    const subject = encodeURIComponent(`Portafolio: ${formData.asunto}`);
+    const body = encodeURIComponent(`Hola Samuel,\n\n${formData.descripcion}\n\nDatos de contacto del cliente: ${formData.contacto}`);
+
+    window.location.href = `mailto:dsolarte432@gmail.com?subject=${subject}&body=${body}`;
+
     setFormData({ asunto: '', descripcion: '', contacto: '' });
   };
 
