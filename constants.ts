@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
     id: '1',
     title: 'App de Amigo Secreto',
     description: 'Una aplicación interactiva para organizar sorteos de amigo secreto con una interfaz fluida.',
-    image: 'public/human.jpeg',
+    image: '/human.jpeg',
     link: 'https://samdev-sys.github.io/-challenge-amigo-secreto/',
     tags: ['JavaScript', 'HTML', 'CSS']
   },
@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
     id: '2',
     title: 'Calculadora de Número Secreto',
     description: 'Juego de lógica y adivinanza desarrollado con lógica de programación pura en JS.',
-    image: 'public/number.png',
+    image: '/number.png',
     link: 'https://samdev-sys.github.io/projects.js/',
     tags: ['JavaScript', 'Logic', 'Web']
   },
@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
     id: '3',
     title: 'TaskFlow (To-Do List)',
     description: 'Gestor de tareas eficiente diseñado para optimizar la productividad personal.',
-    image: 'public/foto_to_Do_List.png',
+    image: '/foto_to_Do_List.png',
     link: 'https://celadon-panda-29619c.netlify.app',
     tags: ['React', 'Management', 'UI/UX']
   },
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
     id: '4',
     title: 'Generador de Contraseñas',
     description: 'Herramienta de seguridad para generar passwords robustos y aleatorios.',
-    image: 'public/candado.png',
+    image: '/candado.png',
     link: 'https://passgen-pz90.onrender.com',
     tags: ['Security', 'Tool', 'Backend']
   },
@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
     id: '5',
     title: 'apps moviles',
     description: 'app movil de clima desarrollada con flutter',
-    image: 'public/screen.png',
+    image: '/screen.png',
     link: 'https://github.com/samdev-sys/weather_app.git',
     tags: ['JavaScript', 'Logic', 'Web']
   }
