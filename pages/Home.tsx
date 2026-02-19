@@ -58,7 +58,7 @@ const Home: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
             <div className="relative aspect-square rounded-3xl overflow-hidden border border-slate-800 bg-slate-900">
               <img
-                src="/public/ChatGPT Image 11 ago 2025, 10_50_46 p.m..png"
+                src="/public/foto_perfil.png"
                 alt="Samuel Vasquez"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />
