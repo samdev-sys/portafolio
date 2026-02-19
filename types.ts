@@ -1,4 +1,6 @@
 
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+
 export interface Project {
   id: string;
   title: string;
@@ -11,5 +13,5 @@ export interface Project {
 export interface SocialLink {
   name: string;
   url: string;
-  icon: string;
+  icon: IconDefinition;
 }

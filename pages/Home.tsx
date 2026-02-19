@@ -1,4 +1,5 @@
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SOCIAL_LINKS } from '../constants';
@@ -46,8 +47,9 @@ const Home: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-slate-900 border border-slate-800 rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition-all text-slate-400 group"
+                    title={link.name}
                   >
-                    <span className="capitalize text-sm font-medium">{link.name}</span>
+                    <FontAwesomeIcon icon={link.icon} className="w-6 h-6" />
                   </a>
                 ))}
               </div>

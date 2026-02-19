@@ -1,4 +1,5 @@
 
+import { faDev, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Project, SocialLink } from './types';
 
 export const PROJECTS: Project[] = [
@@ -48,16 +49,21 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     name: 'Instagram',
     url: 'https://www.instagram.com/',
-    icon: 'instagram'
+    icon: faInstagram
   },
   {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/samuel-david-vasquez-solarte-09407437a',
-    icon: 'linkedin'
+    icon: faLinkedin
   },
   {
     name: 'GitHub',
     url: 'https://github.com/samdev-sys',
-    icon: 'github'
+    icon: faGithub
+  },
+  {
+    name: 'Dev.to',
+    url: 'https://dev.to/samdev-sys',
+    icon: faDev
   }
 ];
