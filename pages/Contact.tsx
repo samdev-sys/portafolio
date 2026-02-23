@@ -18,7 +18,12 @@ const Contact: React.FC = () => {
     setResult('');
 
     if (form.current) {
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+      emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_USER_ID
+      )
         .then((result) => {
             console.log(result.text);
             setResult('Message sent successfully!');
