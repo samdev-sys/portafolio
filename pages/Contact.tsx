@@ -1,22 +1,36 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     asunto: '',
     descripcion: '',
     contacto: ''
   });
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setResult('');
 
-    const subject = encodeURIComponent(`Portafolio: ${formData.asunto}`);
-    const body = encodeURIComponent(`Hola Samuel,\n\n${formData.descripcion}\n\nDatos de contacto del cliente: ${formData.contacto}`);
-
-    window.location.href = `mailto:dsolarte432@gmail.com?subject=${subject}&body=${body}`;
-
-    setFormData({ asunto: '', descripcion: '', contacto: '' });
+    if (form.current) {
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+        .then((result) => {
+            console.log(result.text);
+            setResult('Message sent successfully!');
+            setFormData({ asunto: '', descripcion: '', contacto: '' });
+        }, (error) => {
+            console.log(error.text);
+            setResult('Failed to send message. Please try again.');
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }
   };
 
   return (
@@ -57,12 +71,13 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-2xl space-y-6">
+        <form ref={form} onSubmit={sendEmail} className="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-2xl space-y-6">
           <div className="space-y-2">
             <label className="text-sm font-medium text-slate-300">Asunto</label>
             <input
               required
               type="text"
+              name="asunto"
               value={formData.asunto}
               onChange={(e) => setFormData({ ...formData, asunto: e.target.value })}
               placeholder="¿En qué puedo ayudarte?"
@@ -75,6 +90,7 @@ const Contact: React.FC = () => {
             <textarea
               required
               rows={4}
+              name="descripcion"
               value={formData.descripcion}
               onChange={(e) => setFormData({ ...formData, descripcion: e.target.value })}
               placeholder="Cuéntame más sobre tu idea..."
@@ -87,6 +103,7 @@ const Contact: React.FC = () => {
             <input
               required
               type="text"
+              name="contacto"
               value={formData.contacto}
               onChange={(e) => setFormData({ ...formData, contacto: e.target.value })}
               placeholder="Ej: nombre@email.com o +57..."
@@ -96,10 +113,12 @@ const Contact: React.FC = () => {
 
           <button
             type="submit"
-            className="w-full py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all transform hover:scale-[1.02] shadow-lg"
+            disabled={loading}
+            className="w-full py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all transform hover:scale-[1.02] shadow-lg disabled:opacity-50"
           >
-            Enviar Mensaje
+            {loading ? 'Enviando...' : 'Enviar Mensaje'}
           </button>
+          {result && <p className="text-center mt-4">{result}</p>}
         </form>
       </div>
     </div>
