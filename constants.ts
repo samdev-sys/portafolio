@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
     description: 'Herramienta de seguridad para generar passwords robustos y aleatorios.',
     image: '/candado.png',
     link: 'https://passgen-pz90.onrender.com',
-    tags: ['Security', 'Tool', 'Backend']
+    tags: ['Security', 'Python', 'Backend']
   },
   {
     id: '5',
@@ -41,8 +41,25 @@ export const PROJECTS: Project[] = [
     description: 'app movil de clima desarrollada con flutter',
     image: '/screen.png',
     link: 'https://github.com/samdev-sys/weather_app.git',
-    tags: ['JavaScript', 'Logic', 'Web']
+    tags: ['flutter', 'Dart', 'movil']
+  },
+  {
+    id: '6',
+    title: 'Focussia',
+    description: 'Dashboard personal orientado a productividad y bienestar: rueda de la vida, matriz de prioridades, time blocking, agenda/kanban, recordatorios, metas, notas y una capa colaborativa (workspaces, miembros, invitaciones y delegación). Incluye gamificación (XP, niveles, rachas y badges)',
+    image: '/Focussia.png',
+    link: 'https://github.com/samdev-sys/focussia_web.git',
+    tags: ['React', 'Python', 'Web', 'Productivity']
+  },
+  {
+    id: '7',
+    title: 'Color Matcher',
+    description: 'Una aplicación móvil avanzada desarrollada en Flutter para la captura, análisis y gestión de colores utilizando Inteligencia Artificial (Gemini 1.5 Flash).',
+    image: '/color_matcher.png',
+    link: 'https://github.com/samdev-sys/color_matcher.git',
+    tags: ['Flutter', 'Dart', 'Mobile', 'AI']
   }
+
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
