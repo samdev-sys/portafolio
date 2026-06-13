@@ -1,6 +1,7 @@
 
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import HeroVideoBg from '../components/HeroVideoBg';
 
 const Contact: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -39,7 +40,9 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="-mt-16">
+      <HeroVideoBg>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div className="grid lg:grid-cols-2 gap-16 items-start">
         <div className="space-y-8">
           <div className="space-y-4">
@@ -126,6 +129,8 @@ const Contact: React.FC = () => {
           {result && <p className="text-center mt-4">{result}</p>}
         </form>
       </div>
+    </div>
+    </HeroVideoBg>
     </div>
   );
 };

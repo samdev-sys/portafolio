@@ -1,13 +1,16 @@
 
 import React from 'react';
 import { PROJECTS } from '../constants';
+import HeroVideoBg from '../components/HeroVideoBg';
 
 const Projects: React.FC = () => {
   const ongoingProjects = PROJECTS.filter(p => p.id === '6' || p.id === '7');
   const displayedProjects = PROJECTS.filter(p => p.id !== '6' && p.id !== '7');
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="-mt-16">
+      <HeroVideoBg>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div className="text-center mb-16 space-y-4">
         <h1 className="text-4xl sm:text-5xl font-bold">Mis Proyectos Realizados</h1>
         <p className="text-slate-400 max-w-2xl mx-auto">Una selección de mis trabajos más recientes en desarrollo web y aplicaciones.</p>
@@ -118,6 +121,8 @@ const Projects: React.FC = () => {
           )
         ))}
       </div>
+    </div>
+    </HeroVideoBg>
     </div>
   );
 };

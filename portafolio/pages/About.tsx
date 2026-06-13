@@ -52,9 +52,9 @@ const About: React.FC = () => {
                   controls
                   playsInline
                   className="w-full h-full object-cover"
-                  poster="public/logo.png"
+                  poster="/logo.png"
                 >
-                  <source src="assets/projects.mp4" type="video/mp4" />
+                  <source src="/assets/projects.mp4" type="video/mp4" />
                   Tu navegador no soporta la reproducción de video.
                 </video>
               </div>
