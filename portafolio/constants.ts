@@ -15,9 +15,10 @@ export const PROJECTS: Project[] = [
     id: '2',
     title: 'Calculadora de Número Secreto',
     description: 'Juego de lógica y adivinanza desarrollado con lógica de programación pura en JS.',
-    image: '/number.png',
+    image: '/number.mp4',
     link: 'https://samdev-sys.github.io/projects.js/',
-    tags: ['JavaScript', 'Logic', 'Web']
+    tags: ['JavaScript', 'Logic', 'Web'],
+    video: '/assets/number.mp4'
   },
   {
     id: '3',

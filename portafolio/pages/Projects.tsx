@@ -26,11 +26,17 @@ const Projects: React.FC = () => {
             className="group block bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-400 transition-all transform hover:-translate-y-2 shadow-xl"
           >
             <div className="aspect-video relative overflow-hidden">
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
+              {project.video ? (
+                <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                  <source src="./" type="video/mp4" />
+                </video>
+              ) : (
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
             </div>
             <div className="p-8 space-y-4">
@@ -68,11 +74,17 @@ const Projects: React.FC = () => {
               className="group block bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-400 transition-all transform hover:-translate-y-2 shadow-xl"
             >
               <div className="aspect-video relative overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                {project.video ? (
+                  <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                    <source src={project.video} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
               </div>
               <div className="p-8 space-y-4">
@@ -97,11 +109,17 @@ const Projects: React.FC = () => {
               className="group block bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-400 transition-all transform hover:-translate-y-2 shadow-xl"
             >
               <div className="aspect-video relative overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                {project.video ? (
+                  <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                    <source src={project.video} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
               </div>
               <div className="p-8 space-y-4">

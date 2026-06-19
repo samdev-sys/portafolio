@@ -8,6 +8,7 @@ export interface Project {
   image: string;
   link: string;
   tags: string[];
+  video?: string;
 }
 
 export interface SocialLink {

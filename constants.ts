@@ -17,7 +17,8 @@ export const PROJECTS: Project[] = [
     description: 'Juego de lógica y adivinanza desarrollado con lógica de programación pura en JS.',
     image: '/number.png',
     link: 'https://samdev-sys.github.io/projects.js/',
-    tags: ['JavaScript', 'Logic', 'Web']
+    tags: ['JavaScript', 'Logic', 'Web'],
+    video: '/assets/number.mp4'
   },
   {
     id: '3',
